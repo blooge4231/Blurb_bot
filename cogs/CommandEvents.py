@@ -2,11 +2,15 @@ from discord.ext import commands
 import random
 import discord
 
+  
 class CommandEvents(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
 
-  
+  @commands.Cog.listener()
+  async def on_ready(self):
+    await self.bot.change_presence(activity=discord.Game("dont't worry about it"))
+    print('JCS Bot is ready!')
 #error control
 #@bot.event
 #async def on_command_error(ctx,error):
@@ -34,7 +38,7 @@ class CommandEvents(commands.Cog):
 
   @commands.Cog.listener()
   async def on_message(self, ctx):
-    if ctx.author == self:
+    if ctx.author == self.bot.user:
         return
 
     ramen = ctx.content
