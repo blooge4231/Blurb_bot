@@ -22,7 +22,7 @@ class Media_Search(commands.Cog):
     
     search.replace(' ', '+')
 
-    response = requests.get('http://api.giphy.com/v1/gifs/random?api_key=' + os.getenv('GIPHY_key') + '&tag=' + search + '&rating=pg-13')
+    response = requests.get('http://api.giphy.com/v1/gifs/random?api_key=' + os.getenv('GIPHY_KEY') + '&tag=' + search + '&rating=pg-13')
     data = json.loads(response.text)
 
     result_gif = data['data']['images']['original']['url']
@@ -43,7 +43,7 @@ class Media_Search(commands.Cog):
     embed = discord.Embed(title='From {}'.format(ctx.author),description='Envoked: `OWO, Anime {}`'.format(search),colour=discord.Colour.magenta())
     search = "anime " + search
     search.replace(' ', '+')
-    response = requests.get(("https://api.tenor.com/v1/random?q=%s&key=%s&limit=%s&media_filter=basic") % (search, os.getenv('tenor_key'), 1))
+    response = requests.get(("https://api.tenor.com/v1/random?q=%s&key=%s&limit=%s&media_filter=basic") % (search, os.getenv('TENOR_KEY'), 1))
 
     if response.status_code == 200:
       try:
@@ -61,5 +61,5 @@ class Media_Search(commands.Cog):
       except:
         await ctx.channel.send("{} No image found. Sorry :<").format(ctx.author)
 
-def setup(bot):
-  bot.add_cog(Media_Search(bot))
+async def setup(bot):
+  await bot.add_cog(Media_Search(bot))

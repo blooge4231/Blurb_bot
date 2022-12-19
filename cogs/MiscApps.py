@@ -9,9 +9,10 @@ class Miscellaneous_Apps(commands.Cog):
   #weather commands
   @commands.command(help="<city> Shows what the weather's like somewhere in the world")
   async def weather(self, ctx, *, city: str):
-    base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    # extract coordinate data
+    weather_key = os.getenv('WEATHER_KEY')
     city_name = city
-    complete_url = base_url + "appid=" + os.getenv('api_key') + "&q=" + city_name
+    complete_url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={weather_key}'
     response = requests.get(complete_url)
     x = response.json()
 
@@ -53,5 +54,5 @@ class Miscellaneous_Apps(commands.Cog):
     else:
         await channel.send("City not found.")
 
-def setup(bot):
-  bot.add_cog(Miscellaneous_Apps(bot))
+async def setup(bot):
+  await bot.add_cog(Miscellaneous_Apps(bot))
