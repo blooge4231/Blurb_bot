@@ -3,9 +3,9 @@ from discord.ext import commands
 import os
 import requests
 import datetime
-
+# initialize weather search related slash commands
 def init_weather_search(bot):
-
+    # openWeather API slash command
     @bot.slash_command(name='weather', description='<city> Get the current weather somewhere!', guild_ids=[788518876278423572])
     async def weather(ctx, *, city):
         # extract coordinate data

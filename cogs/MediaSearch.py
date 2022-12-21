@@ -5,7 +5,7 @@ import discord
 import datetime
 # intialize slash commands, given bot object
 def init_media_search(bot):
-
+  # Giphy slash command
   @bot.slash_command(name='cute', description='<search> Find a cute gif online!', guild_ids=[788518876278423572])
   async def cute(ctx, *, search):
     #user gif log
@@ -26,7 +26,7 @@ def init_media_search(bot):
     embed.set_footer(text="Sent by{} at {}. Gif pulled from Giphy".format(ctx.author, time))
 
     await ctx.respond(embed=embed)
-
+  # TenorGif slash command
   @bot.slash_command(name='anime', description= '<search> Find an anime-related gif!', guild_ids=[788518876278423572])
   async def anime(ctx, search):
     print('')

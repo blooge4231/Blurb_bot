@@ -12,6 +12,6 @@ def main():
     init_media_search(bot)
     init_weather_search(bot)
     bot.run(os.getenv('DISCORD_TOKEN'))
-
+# run main routine
 if __name__ == '__main__':
     main()
