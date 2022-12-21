@@ -9,8 +9,8 @@ Blurb Bot is a discord bot with some cool cool cool cool features! Here's a rund
 * **Check the weather, pulled from the OpenWeather API!**
 
 ## How it was built
-This project utilizes Microsoft's DialoGPT-medium GPT2 model, fine-tuned on Pytorch using portion of the dialogue transcripts for **OMORI**!
-Blurb bot was created using [Pycord](https://link-url-here.org](https://github.com/Pycord-Development/pycord)) library. All API keys are saved and fetched from .env file.
+This project utilizes Microsoft's DialoGPT-medium GPT2 model, fine-tuned on Pytorch using a portion of the dialogue transcripts for **OMORI**!
+Blurb bot was created using the [Pycord](https://link-url-here.org](https://github.com/Pycord-Development/pycord)) library. Note that all API keys are saved and fetched from hidden .env file.
 
 ## Commands
 * `/cute <search>` For Giphy Search
