@@ -6,7 +6,7 @@
 Blurb Bot is a discord bot with some cool cool cool cool features! Here's a rundown of the main ones:
 * **Talks to you when you are lonely... using a GPT2 trained model!**
 * **Fetch gifs from TenorGif and Giphy!** 
-* **Check the weather at some city, pulled from the OpenWeather API!**
+* **Check the weather, pulled from the OpenWeather API!**
 
 ## How it was built
 This project utilizes Microsoft's DialoGPT-medium GPT2 model, fine-tuned on Pytorch using portion of the dialogue transcripts for **OMORI**!
