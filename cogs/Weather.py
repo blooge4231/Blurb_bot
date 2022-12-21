@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 import requests
 
-class Miscellaneous_Apps(commands.Cog):
+class Weather(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
   #weather commands
@@ -55,4 +55,4 @@ class Miscellaneous_Apps(commands.Cog):
         await channel.send("City not found.")
 
 async def setup(bot):
-  await bot.add_cog(Miscellaneous_Apps(bot))
+  await bot.add_cog(Weather(bot))

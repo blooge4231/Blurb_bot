@@ -4,12 +4,11 @@ import os
 import requests
 import discord
 import datetime
-
 class Media_Search(commands.Cog):
   def __init__(self, bot):
    self.bot = bot
 
-  #search for miscellaneous gifs from giphy      
+  # search for miscellaneous gifs from giphy      
   @commands.command(help="<search> Find a cute gif! (results from giphy so it might not make sense lmao)")
   async def cute(self, ctx, *, search):
     #user gif log
@@ -33,7 +32,7 @@ class Media_Search(commands.Cog):
     await ctx.send(embed=embed)
 
 
-#search for anime-related stuff from tenorgif
+  # search for anime-related stuff from tenorgif
   @commands.command(help="<search> Find an anime-related gif!")
   async def anime(self, ctx, search):
     print('')
