@@ -17,6 +17,7 @@ def init_weather_search(bot):
 
         channel = ctx.channel
         
+        # format embed to send to channel
         if x["cod"] != "404":
             async with channel.typing():
                 y = x["main"]
